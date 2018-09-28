@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>User Home</title>
+  <title>User Home</title>
+  <meta name="description" content="User Home" />
+  <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}/static/style.css" title="style" />
 </head>
 <body>
-	Welcome {{ uname }}
-	<ul>
-		<li>
-			<a href="logout">Logout</a>
-		</li>
-		<li>
-			<a href="user/profile">View Profile</a>
-		</li>
-	</ul>
-	
+  <div id="main">
+    {% include "header.html" %} 
+    <div id="site_content">
+      <div class="sidebar">
+       {% include "sidebar.html" %}
+      </div>
+      <div id="content">
+       Welcome {{ uname }}
+	    </div>
+    </div>
+    {% include "footer.html" %} 
+  </div>
 </body>
 </html>

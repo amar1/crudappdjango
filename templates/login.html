@@ -1,34 +1,48 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Login</title>
-	</head>
-	<body>
-		<form action="login" method="post">
-			<table>
-				<tr>
-					<td>
-						<label for="username">Username</label>
-					</td>
-					<td>
-						<input type="text" name="username"/>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<label for="password">Password</label>
-					</td>
-					<td>
-						<input type="password" name="password"/>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<button type="submit">Login</button>
-					</td>
-				</tr>
-			</table>
-		</form>
-		<a href="/register">Register</a>
-	</body>
+<head>
+  <title>Register</title>
+  <meta name="description" content="Django sample" />
+  <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}/static/style.css" title="style" />
+</head>
+<body>
+  <div id="main">
+    {% include "header.html" %} 
+    <div id="site_content">
+      <div class="sidebar">
+        {% include "sidebar.html" %}
+      </div>
+      <div id="content">
+        <form action="login" method="post">
+          <table>
+            <tr>
+              <td>
+                <label for="username">Username</label>
+              </td>
+              <td>
+                <input type="text" name="username"/>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="password">Password</label>
+              </td>
+              <td>
+                <input type="password" name="password"/>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <button type="submit">Login</button>
+              </td>
+            </tr>
+          </table>
+        </form>
+        <a href="/register">Register</a>
+
+      </div>
+    </div>
+    {% include "footer.html" %} 
+  </div>
+</body>
 </html>

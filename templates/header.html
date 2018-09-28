@@ -1,0 +1,19 @@
+<div id="header">
+  <div id="logo">
+    <div id="logo_text">
+      <h1>Django Sample</h1>
+    </div>
+  </div>
+  <div id="menubar">
+    <ul id="menu">
+      <li class="selected"> <a href="/"> Home </a> </li>
+      {% if uname is exist %}
+      <li> <a href="/login"> Login </a> </li>
+      <li> <a href="/register"> Register </a> </li>
+      {% else %}
+        <li> <a href="/user/profile"> User Profile </a> </li>
+        <li> <a href="/logout"> Logout </a> </li>
+      {% endif %}
+    </ul>
+  </div>
+</div>

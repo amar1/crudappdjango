@@ -1,10 +1,22 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Home</title>
-	</head>
-	<body>
-		Home
-		<a href="/login">Login</a>
-	</body>
+    <title>Home</title>
+    <meta name="description" content="Django Sample" />
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}/static/style.css" title="style" />
+  </head>
+<body>
+  <div id="main">
+    {% include "header.html" %} 
+    <div id="site_content">
+      <div class="sidebar">
+        {% include "sidebar.html" %}      
+      </div>
+      <div id="content">
+        Home
+		  </div>
+    </div>
+    {% include "footer.html" %} 
+  </div>
+</body>
 </html>

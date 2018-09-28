@@ -13,7 +13,7 @@ import pdb #debugger
 @csrf_exempt
 def login(request):
 	response = None
-	
+
 	if request.method == 'GET':
 		t = get_template('login.html')
 		response = t.render()
@@ -22,9 +22,6 @@ def login(request):
 		uname = request.POST.get("username")
 		passw = request.POST.get("password")
 		ename = employee.authenticateEmployee(uname, passw) 
-		
-		# print(uname)
-		# exit()
 		
 		if ename is not None:
 			request.session['uname'] = ename
